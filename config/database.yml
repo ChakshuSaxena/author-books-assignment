@@ -1,13 +1,9 @@
 default: &default
   adapter: postgresql
   host: localhost
-  username: anand
-  password: apple
+  username: postgres
+  password: postgres
 
 development:
   <<: *default
-  database: video_call_app_rails_development
-
-production:
-  <<: *default
-  database: video_call_app_rails_development 
+  database: books_authors_development

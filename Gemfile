@@ -34,10 +34,6 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 # Reduces boot times through caching; required in config/boot.rb
-
-gem 'devise'
-gem 'devise-bootstrap-views', '~> 1.0'
-gem 'opentok', '~> 2.3'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
@@ -72,4 +68,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
+gem "select2-rails"
 

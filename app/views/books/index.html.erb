@@ -1,0 +1,30 @@
+<div class="container">
+  <div style= "margin-top: 80px;">
+    <p id="notice"><%= notice %></p>
+    <div class="create_meeting">
+      <%=link_to "New Book", new_book_path, class: 'btn btn-outline-primary'%>
+    </div>
+    <h2>Books</h2>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Title</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%unless @books.blank?%>
+          <% @books.each_with_index do |book, index| %>
+            <tr>
+              <td><%= index + 1 %></td>
+              <td><%= book.title %></td>
+              <td><%= link_to 'Show', book %></td>
+              <td><%= link_to 'Edit', edit_book_path(book) %></td>
+              <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          <% end %>
+        <%end%>
+      </tbody>
+    </table>
+  </div>
+</div>

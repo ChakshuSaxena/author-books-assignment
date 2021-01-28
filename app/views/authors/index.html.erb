@@ -1,0 +1,34 @@
+<div class="container">
+  <div style= "margin-top: 80px;">
+    <p id="notice"><%= notice %></p>
+    <div class="create_meeting">
+      <%=link_to "New Author", new_author_path, class: 'btn btn-outline-primary'%>
+    </div>
+    <h2>Authors</h2>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">First Name</th>
+          <th scope="col">Last Name</th>
+          <th scope="col">Date Of Birth</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%unless @authors.blank?%>
+          <% @authors.each_with_index do |author, index| %>
+            <tr>
+              <td><%= index + 1 %></td>
+              <td><%= author.first_name %></td>
+              <td><%= author.last_name %></td>
+              <td><%= author.date_of_birth %></td>
+              <td><%= link_to 'Show', author %></td>
+              <td><%= link_to 'Edit', edit_author_path(author) %></td>
+              <td><%= link_to 'Destroy', author, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          <% end %>
+        <%end%>
+      </tbody>
+    </table>
+  </div>
+</div>

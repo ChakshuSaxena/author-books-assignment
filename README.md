@@ -1,8 +1,4 @@
-# Video Call 
-
->We have used Opentok gem for video calling. One user can do the video call with >other users.
->User can create their own meetings and select the users for that meeting and >then a meeting url is generated which user can share with selected users and >then only selected users can join the meeting through that url after login >their account.
-Reference- https://github.com/opentok/OpenTok-Ruby-SDK
+# Rails Author Books
 
 # Setup
 
@@ -14,51 +10,6 @@ Reference- https://github.com/opentok/OpenTok-Ruby-SDK
       -rake db:migrate 
       -rake db:seed
 
+# API END POINT
+    http://localhost:3000/api/v1/authors/1
 
-You need to add Gems in gemfile:
-- gem 'devise'
-- gem 'opentok', '~> 2.3'
-
-
-# User credentials
-* User 1: email- "email1@email.com"
-        password: "password"
-* User 2:  email- "email2@email.com"
-        password: "password"
-
-# User signup
-
-<div align="center">
-    <img src="/app/assets/images/meeting_signup.png" width="400px"</img> 
-</div>
-
-# User Login
-
-<div align="center">
-    <img src="/app/assets/images/login_ss.png" width="400px"</img> 
-</div>
-
-# New meeting creation
-
-<div align="center">
-    <img src="/app/assets/images/new_meeting_ss.png" width="400px"</img> 
-</div>
-
-# Meeting lists
-
-<div align="center">
-    <img src="/app/assets/images/meeting_list_ss.png" width="400px"</img> 
-</div>
-
-
-# Meeting confrence(Publisher)
-
-<div align="center">
-    <img src="/app/assets/images/meeting_call_a.png" width="400px"</img> 
-</div>
-
-# Meeting confrence(Subscriber)
-
-<div align="center">
-    <img src="/app/assets/images/meeting_call_b.png" width="400px"</img> 
-</div>

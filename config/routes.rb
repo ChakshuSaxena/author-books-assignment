@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
+  root 'authors#index'
+  resources :books
+  resources :authors, except: [:index]
 
-  devise_for :users
-  root to: "meetings#index"
-
-  resources :meetings
+  namespace :api do
+  	scope module: :v1, :path => "v1" do
+  		resources :authors, :only => [:show]
+  	end
+  end  
 end

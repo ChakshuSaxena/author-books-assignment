@@ -14,6 +14,7 @@
 //= require rails-ujs
 //= require jquery-ui
 //= require popper.min
+//= require select2
 //= require activestorage
 // require turbolinks
 //= require_tree .

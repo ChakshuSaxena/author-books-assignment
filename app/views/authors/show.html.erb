@@ -1,0 +1,46 @@
+<div class="container" style="margin-top: 80px;">
+	<div class="row">
+		<div class="col-md-6">
+			<p id="notice"><%= notice %></p>
+			<p>
+			  <strong>First name:</strong>
+			  <%= @author.first_name %>
+			</p>
+
+			<p>
+			  <strong>Last name:</strong>
+			  <%= @author.last_name %>
+			</p>
+
+			<p>
+			  <strong>Date of birth:</strong>
+			  <%= @author.date_of_birth %>
+			</p>
+
+	    <h2>Books</h2>
+	    <table class="table table-hover">
+	      <thead>
+	        <tr>
+	          <th scope="col">Id</th>
+	          <th scope="col">Title</th>
+	        </tr>
+	      </thead>
+	      <tbody>
+	        <%unless @author.books.blank?%>
+	          <% @author.books.each_with_index do |book, index| %>
+	            <tr>
+	              <td><%= index + 1 %></td>
+	              <td><%= book.title %></td>
+	              <td><%= link_to 'Show', book %></td>
+	            </tr>
+	          <% end %>
+	        <%end%>
+	      </tbody>
+	    </table>			
+
+			<%= link_to 'Edit', edit_author_path(@author), class: "btn btn-primary" %> |
+			<%= link_to 'Back', authors_path, class: "btn btn-primary" %>			
+
+    </div>
+  </div>
+</div>
